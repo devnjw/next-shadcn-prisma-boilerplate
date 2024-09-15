@@ -10,7 +10,9 @@ interface Todo {
 }
 
 export async function getTodos() {
-  return await prisma.todo.findMany()
+  return await prisma.todo.findMany({
+    orderBy: { createdAt: 'desc' },
+  })
 }
 
 export async function addTodo(text: string) {
