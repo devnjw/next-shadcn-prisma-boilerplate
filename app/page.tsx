@@ -6,8 +6,8 @@ export default async function TodoList() {
   const todos = await getTodos()
 
   return (
-    <div className="max-w-md mx-auto mt-8 p-6 bg-card rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold mb-4 text-card-foreground">
+    <div className="mx-auto mt-8 max-w-md rounded-lg bg-card p-6 shadow-lg">
+      <h1 className="mb-4 text-2xl font-bold text-card-foreground">
         Todo List
       </h1>
       <AddTodo addTodo={addTodo} />

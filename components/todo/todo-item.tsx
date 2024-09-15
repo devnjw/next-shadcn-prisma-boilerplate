@@ -18,7 +18,7 @@ interface TodoItemProps {
 
 export function TodoItem({ todo, toggleTodo, deleteTodo }: TodoItemProps) {
   return (
-    <li className="flex items-center bg-background p-2 rounded">
+    <li className="flex items-center rounded bg-background p-2">
       <Checkbox
         checked={todo.completed}
         onCheckedChange={() => toggleTodo(todo.id)}
@@ -26,7 +26,7 @@ export function TodoItem({ todo, toggleTodo, deleteTodo }: TodoItemProps) {
       />
       <span
         className={`flex-grow ${
-          todo.completed ? 'line-through text-muted-foreground' : 'text-primary'
+          todo.completed ? 'text-muted-foreground line-through' : 'text-primary'
         }`}
       >
         {todo.text}

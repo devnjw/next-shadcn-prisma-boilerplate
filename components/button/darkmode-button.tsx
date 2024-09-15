@@ -10,7 +10,7 @@ export default function DarkModeToggle() {
   return (
     <Button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="fixed bottom-4 right-4 p-2 rounded-full bg-gray-800 text-gray-200 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-colors duration-200"
+      className="fixed bottom-4 right-4 rounded-full bg-gray-800 p-2 text-gray-200 transition-colors duration-200 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
       aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
       {theme === 'dark' ? (

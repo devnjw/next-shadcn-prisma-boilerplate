@@ -20,13 +20,13 @@ export function AddTodo({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex mb-4">
+    <form onSubmit={handleSubmit} className="mb-4 flex">
       <Input
         type="text"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
         placeholder="Add a new task"
-        className="flex-grow mr-2 text-primary"
+        className="mr-2 flex-grow text-primary"
       />
       <Button type="submit">Add</Button>
     </form>
