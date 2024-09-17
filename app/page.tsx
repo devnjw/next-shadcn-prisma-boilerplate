@@ -1,8 +1,12 @@
 import { TodoItem } from '@/components/todo/todo-item'
 import { AddTodo } from '@/components/todo/add-todo'
 import { getTodos, addTodo, toggleTodo, deleteTodo } from '@/lib/action/todo'
+import LoginButton from '@/components/button/login-button'
+import LogoutButton from '@/components/button/logout-button'
+import { validateRequest } from '@/lib/action/auth'
 
 export default async function TodoList() {
+  const { user } = await validateRequest()
   const todos = await getTodos()
 
   return (
@@ -21,6 +25,7 @@ export default async function TodoList() {
           />
         ))}
       </ul>
+      {user ? <LogoutButton /> : <LoginButton />}
     </div>
   )
 }
